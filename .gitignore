@@ -1,0 +1,32 @@
+# Python-specific files and folders
+__pycache__/
+*.pyc
+
+# Virtual environment folder
+.venv/
+
+# IDE-specific files (e.g., from VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Operating system-specific files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Data and model files that should not be committed
+# These should be managed by Git LFS or external links, not in the repo itself
+models/*.h5 # Assuming you are using Git LFS for this file
+data/
+*.zip
+*.tar.gz
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs and temporary files
+*.log
+temp/
+
+# Raw and preprocessed dataset
+FaceShape_Dataset/
+Preprocessed_data/
