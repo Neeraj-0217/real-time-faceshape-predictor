@@ -30,3 +30,6 @@ temp/
 # Raw and preprocessed dataset
 FaceShape_Dataset/
 Preprocessed_data/
+
+# Temporary face-cut file
+face.png

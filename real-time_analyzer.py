@@ -24,7 +24,6 @@ def run_face_detection():
     """
     # Initialize MediaPipe's Face Detection solution
     mp_face_detection = mp.solutions.face_detection
-    # mp_drawing = mp.solutions.drawing_utils
 
     FACE_MARGIN = 25
     CAPTURE_DELAY = 5
@@ -154,7 +153,7 @@ def show_face_shape_results(cropped_face_path, predictions, top_k=4):
     # Sort predictions by probability (descending) & select top_k
     sorted_preds = sorted(predictions.items(), key=lambda x: x[1], reverse=True)[:top_k]
     shapes = [s for s, _ in sorted_preds]
-    probs = [p * 100 for _, p in sorted_preds]  # convert to %
+    probs = [p * 100 for _, p in sorted_preds]  
 
     # Assign colors for consistency
     colors = {
@@ -175,7 +174,7 @@ def show_face_shape_results(cropped_face_path, predictions, top_k=4):
     ax1.axis("off")
     top_shape = shapes[0]
     ax1.set_title(f"Detected Shape: {top_shape.upper()}",
-                  fontsize=14, fontweight="bold", color="#FFD700")  # Gold highlight
+                  fontsize=14, fontweight="bold", color="#FFD700")  
 
     # Initialize horizontal bar chart with zeros
     bars = ax2.barh(shapes, [0]*len(probs), color=bar_colors, alpha=0.9)
