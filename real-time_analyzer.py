@@ -6,7 +6,6 @@ import time
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import tensorflow as tf
-import pyttsx3
 
 # CONFIGURATION
 MODEL_PATH_CLASSIFIER = 'models/face_shape_classifier_5_classes.h5'
@@ -215,7 +214,7 @@ def analyze_face_shape(model, img_path):
     Analyzes the face shape using the trained classifier.
     Args:
         model: The loaded Keras model.
-        img_array: Preprocessed face image (numpy array, ready for prediction).
+        img_path: Preprocessed face image (numpy array, ready for prediction).
     Returns:
         confidence_scores: dict, probabilities for all classes.
     """
